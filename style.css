@@ -32,29 +32,43 @@
 }
 .header-logo-img {
     height: 49px;
-    width: 408зч;
-    background: url('/image/logo.png') no-repeat;
+    width: 408px;
 }
 .header-nav-links {
     display: flex;
     align-items: center;
 }
-
+.header-nav{
+    width: 50%;
+}
 .header-nav-link {
-    margin-right: 30px;
+    margin-right: 15px;
 
 }
 
 .header-nav-link a {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     text-decoration: none;
 }
 
 .header-nav-search {
     display: flex;
+    align-items: center;
     width: 266px;
     height: 32px;
+}
+.header-nav-search-ic {
+    display: none;
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+}
+.header-nav-search input {
+    width: 100%;
+    height: 32px;
+    border: 1px solid #B3B3B3;
+    background: #FFF;
 }
 
 .header-nav-search button {
@@ -68,23 +82,31 @@
     width: 100%;
     height: 266px;
     background: linear-gradient(270deg, #E3EEFA 59.35%, rgba(227, 238, 250, 0.00) 100%), linear-gradient(90deg, #E3EEFA 33.22%, rgba(227, 238, 250, 0.00) 100%), url(<path-to-image>), lightgray 333.054px -9.515px / 71.042% 106.479% no-repeat;
-
+    padding-left: 20px;
 }
 
 .contactUs .container {
     background: url('./image/bg-contactUs.png') no-repeat;
     background-position: top center;
     height: 100%;
+    width: 100%;
 }
 
 .contactUs-links {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 16px;
+}
+.contactUs-link {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 16px;
 }
 
 .contactUs-link a{
+    width: 100%;
     text-decoration: none;
     border-bottom: 1px solid #E3EEFA;
 }
@@ -93,13 +115,16 @@
     cursor: pointer;
 }
 .contactUs-info {
-    width: 60%;
     margin-top: 60px;
-    gap: 36px;
+    gap: 16px;
+    justify-content: flex-start;
 }
 
 .contactUs-info-title {
-    width: 30%;
+    width: 20%;
+}
+.contactUs-info-description {
+    width: 50%;
 }
 
 .writeUs {
@@ -108,9 +133,10 @@
 
 .writeUs-cont {
     width: 706px;
-    height: 418px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     position: relative;
-
 }
 
 .writeUs-inputs-title {
@@ -137,9 +163,9 @@
 .writeUs-input input {
     width: 546px;
     height: 32px;
-    border: 1px solid #B3B3B3;
-    background: #FFF;
+
 }
+
 
 .big input {
     width: 546px;
@@ -163,16 +189,21 @@
     background: #009EE8;
     color: #FFF;
     position: absolute;
-    bottom: -150px;
     right: 0;
+    bottom: -50px;
+
 }
 
-.email {
+.email-section {
     width: 100%;
-    height: 160px;
+    height: 100%;
+    padding: 20px;
     background: #CFEFFF;
-    margin-top: 60px;
-    padding: 30px;
+
+}
+.writeUs-input input .error {
+    border: 1px solid red;
+    background: #FFF;
 }
 
 .email-info {
@@ -214,14 +245,14 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 
 }
 
 .ofBanks-item {
-    width: 25%;
     display: flex;
     align-items: center;
-    padding: 60px 0;
+    padding-bottom: 60px;
     gap: 15px;
 }
 
@@ -245,8 +276,10 @@
 }
 
 .footer-nav {
+    width: 100%;
     margin: 40px 0;
     gap: 40px;
+
 }
 
 .footer-nav-links {
@@ -254,6 +287,7 @@
     align-items: center;
     justify-content: flex-end;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .footer-nav-link {
@@ -288,8 +322,12 @@
     font-size: 14px;
     color: #FFF;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 992px) {
 
+
+    .container {
+        width: 100%;
+    }
     .header-nav {
         display: flex;
         flex-direction: column;
@@ -298,11 +336,23 @@
         display: flex;
         flex-direction: column;
     }
-    .header-logo-img {
-        background: url('/image/logo-768.png');
+    .header-nav-search{
+        width: 100%;
     }
+    .ofBanks-items {
+        flex-direction: column;
+    } 
 
 }
 @media all and (max-width: 320px) {
+    .header-nav-links {
+        display: none;
+    }
+    .header-nav-search input{
+        display: none;
 
+    }
+    .header-nav-search-ic {
+        display: block;
+    }
 }

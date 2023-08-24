@@ -14,7 +14,7 @@
         <div class="container flexR">
             <div class="header-logo">
                 <div class="header-logo-img">
-
+                    <img src="/image/logo.png" alt="logo">
                 </div>
             </div>
             <div class="header-nav flexR">
@@ -48,6 +48,9 @@
                 </div>
                 <div class="header-nav-search">
                     <input type="text" name="" id="input-search">
+                    <div class="header-nav-search-ic">
+                        <img src="/image/header-nav-search-ic.png" alt="menu">
+                    </div>
                     <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                             fill="none">
                             <g clip-path="url(#clip0_1_202)">
@@ -123,35 +126,38 @@
                     <h2 class="writeUs-inputs-title">
                         WRITE US
                     </h2>
-                    <div class="writeUs-input flexR">
-                        <label for="subject">Subject*:</label>
-                        <select id="subject" name="subject">
-                            <option value="">Select Subject</option>
-                            <option value="Choosing Credit Card">Choosing Credit Card</option>
-                            <option value="Credit Card Application Problems">Credit Card Application Problems</option>
-                            <option value="Earning and Redeeming Rewards">Earning and Redeeming Rewards</option>
-                            <option value="Building Credit with Credit Card">Building Credit with Credit Card</option>
-                            <option value="Balance Transfer Issues">Balance Transfer Issues</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div class="writeUs-input flexR">
-                        <label for="email">E-mail*:</label>
-                        <input id="email" type="email">
-                    </div>
-                    <div class="writeUs-input flexR">
-                        <label for="name">Name*:</label>
-                        <input id="name" type="text">
-                    </div>
-                    <div class="writeUs-input flexR">
-                        <label for="number">Phone number:</label>
-                        <input id="number" type="tel">
-                    </div>
-                    <div class="writeUs-input big flexR">
-                        <label for="question">Question*:</label>
-                        <input id="question" type="text">
-                    </div>
-                    <button class="writeUs-button">SEND</button>
+                    <form action="/apply/" class="form" method="post" id="form">
+                        <div class="writeUs-input flexR">
+                            <label for="subject">Subject*:</label>
+                            <select id="subject" name="subject" class="req">
+                                <option value="">Select Subject</option>
+                                <option value="Choosing Credit Card">Choosing Credit Card</option>
+                                <option value="Credit Card Application Problems">Credit Card Application Problems</option>
+                                <option value="Earning and Redeeming Rewards">Earning and Redeeming Rewards</option>
+                                <option value="Building Credit with Credit Card">Building Credit with Credit Card</option>
+                                <option value="Balance Transfer Issues">Balance Transfer Issues</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="writeUs-input flexR">
+                            <label for="email">E-mail*:</label>
+                            <input id="email" type="email" required class="email req">
+                        </div>
+                        <div class="writeUs-input flexR">
+                            <label for="name">Name*:</label>
+                            <input id="name" type="text" required class="name req">
+                        </div>
+                        <div class="writeUs-input flexR">
+                            <label for="number">Phone number:</label>
+                            <input id="number" type="phone" required class="phone req">
+                        </div>
+                        <div class="writeUs-input big flexR">
+                            <label for="question">Question*:</label>
+                            <input id="question" type="text" required class="question req">
+                        </div>
+                        <button class="writeUs-button" type="submit">SEND</button>
+                    </form>
+
                 </div>
             </div>
 
@@ -173,7 +179,7 @@
             </div>
         </div>
     </section>
-    <section class="email">
+    <section class="email-section">
         <div class="container">
             <div class="email-cont">
                 <img src="/image/Frame 2.png" alt="email">
